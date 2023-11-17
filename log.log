@@ -1,0 +1,316 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.4.RELEASE)
+
+2021-12-17 03:54:48.413 - Starting PushApplication on s10-26 with PID 81198 (/opt/tig-push/tig-push-1.0.war started by root in /opt/tig-push)
+2021-12-17 03:54:48.416 - No active profile set, falling back to default profiles: default
+2021-12-17 03:54:50.655 - redisson Single start 
+2021-12-17 03:54:51.526 - redisson create end 
+2021-12-17 03:54:53.091 -  ConstantUtil----init--- Start
+2021-12-17 03:54:53.091 -  ConstantUtil----MsgMap--- init
+2021-12-17 03:54:53.113 - TigBeanUtils ===> init end  ===> localSpringBeanManager > LocalSpringBeanManager
+2021-12-17 03:54:53.124 -  MQ config nameAddr ===> 127.0.0.1:9876
+2021-12-17 03:54:53.141 - pushThread  start end ===>
+2021-12-17 03:54:53.869 - Started PushApplication in 6.35 seconds (JVM running for 7.046)
+2021-12-17 03:54:53.941 - 10005已经注册了!请放心连接
+2021-12-17 03:54:53.941 - 
+>>>>>>>>>>>>>>> 默认API系统消息tigase账号数据初始化完成  <<<<<<<<<<<<<
+2021-12-17 03:54:54.207 - 推送服务启动成功...=======>
+2021-12-18 19:35:12.014 -  new msg ==> {"fromUserName":"asdasd","deleteTime":-1,"fromUserId":"10000005","timeSend":1639827311.924,"messageId":"6a5cfc6192c34f2eb94155bf84a73c56","type":1,"isGroup":false,"toUserId":10000010,"content":"1.你好亲  我是你的接单指导老师 【王雪】\n做单及咨询期间有什么不懂的不会的都可以问我.                                                                                                                                                 .\n 2.为了让亲更加熟悉我们的工作性质，给您一单试做下，（试做0.5元，正式工作一单1-3元）\n\nhttps://wj.qq.com/s2/7525136/7bf8/\n  \n点击上面试做链接，打开后按图片填写，  \n重要提示：链接如果点不开，复制，到浏览器打开做单 \n【填好以后截图发给我 不要提交做好截图给我】\n【填好以后截图发给我 不要提交做好截图给我"}
+2021-12-18 19:35:12.948 - deviceMap is Null > 10000010
+2021-12-19 23:24:57.779 -  new msg ==> {"fromUserName":"asdasd","deleteTime":-1,"fromUserId":"10000005","timeSend":1639927497.694,"messageId":"f460124e002d4f12a6b496a5e7f21bda","type":1,"isGroup":false,"toUserId":10000010,"content":"奥术大师多"}
+2021-12-19 23:24:58.780 - deviceMap is Null > 10000010
+2021-12-20 13:50:53.150 -  new msg ==> {"fromUserId":"10000020","messageId":"0e89d864414e47ee97e6474edaf14df2","type":500,"toUserId":10000021,"content":"","fromUserName":"安迪","timeSend":1639979453.101,"toUserName":"李雪在线指导","to":"10000021","id":"0e89d864414e47ee97e6474edaf14df2","toJid":"10000021","isGroup":false,"chatType":"chat"}
+2021-12-20 13:50:53.328 - deviceMap is Null > 10000021
+2021-12-20 13:51:55.400 -  new msg ==> {"fromUserId":"10000020","messageId":"fa0c61b908b9497fbbd84801e1ab9fe8","type":501,"toUserId":10000021,"content":"","fromUserName":"安迪","timeSend":1639979515.354,"toUserName":"李雪在线指导","to":"10000021","id":"fa0c61b908b9497fbbd84801e1ab9fe8","toJid":"10000021","isGroup":false,"chatType":"chat"}
+2021-12-20 13:51:56.343 - deviceMap is Null > 10000021
+2021-12-20 13:54:45.396 -  new msg ==> {"fromUserId":"10000020","messageId":"4328978796984cfb8e17b7cae22002bc","type":501,"toUserId":10000021,"content":"","fromUserName":"安迪","timeSend":1639979685.364,"toUserName":"李雪在线指导","to":"10000021","id":"4328978796984cfb8e17b7cae22002bc","toJid":"10000021","isGroup":false,"chatType":"chat"}
+2021-12-20 13:54:46.501 - 4328978796984cfb8e17b7cae22002bc apns push to > 10000021  f940b671cd6f5a130a9a12f0de6c95ff4c0b6e9c15d53568a29b6483cf8f1f31 
+2021-12-20 13:54:46.505 - getApnsClientBuilder Exception {} /opt/tig-push/lexun_apns.p12 (No such file or directory)
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.getApnsService(ApnsHttp2PushService.java:120)
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.access$000(TigMessageListenerConcurrently.java:61)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently$PushThread.run(TigMessageListenerConcurrently.java:783)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:54:46.508 -  apns push Exception null
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.access$000(TigMessageListenerConcurrently.java:61)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently$PushThread.run(TigMessageListenerConcurrently.java:783)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:55:36.201 -  new msg ==> {"fileName":"61c01ad7c53624c1aa287105","other":"{\"lsLook\":1,\"allowSendCard\":1,\"isNeedVerify\":0,\"showMember\":1,\"showRead\":0}","msgType":0,"fromUserId":"10000020","messageId":"9393338352cb46ef89bf3a1c1b6df55d","type":907,"toUserId":10000021,"content":"vdsf","fromUserName":"安迪","fileSize":0,"timeSend":1639979736,"toUserName":"李雪在线指导","isGroup":false,"objectId":"a278fc19fb3d49d18a1fc74a81bd704a"}
+2021-12-20 13:55:36.523 - 9393338352cb46ef89bf3a1c1b6df55d apns push to > 10000021  f940b671cd6f5a130a9a12f0de6c95ff4c0b6e9c15d53568a29b6483cf8f1f31 
+2021-12-20 13:55:36.524 - getApnsClientBuilder Exception {} /opt/tig-push/lexun_apns.p12 (No such file or directory)
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.getApnsService(ApnsHttp2PushService.java:120)
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.access$000(TigMessageListenerConcurrently.java:61)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently$PushThread.run(TigMessageListenerConcurrently.java:783)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:55:36.525 -  apns push Exception null
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.access$000(TigMessageListenerConcurrently.java:61)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently$PushThread.run(TigMessageListenerConcurrently.java:783)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:55:49.330 -  new msg ==> {"fromUserId":"10000020","messageId":"8515132c3baf436b9edb775fa6711e10","type":1,"toUserId":"a278fc19fb3d49d18a1fc74a81bd704a","content":"e53454435435435345","fromUserName":"安迪","roomJid":"a278fc19fb3d49d18a1fc74a81bd704a","timeSend":1639979749.298,"toUserName":"vdsf","to":"a278fc19fb3d49d18a1fc74a81bd704a","id":"8515132c3baf436b9edb775fa6711e10","toJid":"a278fc19fb3d49d18a1fc74a81bd704a","isGroup":true,"chatType":"groupchat"}
+2021-12-20 13:55:49.350 - deviceMap is Null > 10000
+2021-12-20 13:55:49.359 - 8515132c3baf436b9edb775fa6711e10 apns push to > 10000021  f940b671cd6f5a130a9a12f0de6c95ff4c0b6e9c15d53568a29b6483cf8f1f31 
+2021-12-20 13:55:49.360 - getApnsClientBuilder Exception {} /opt/tig-push/lexun_apns.p12 (No such file or directory)
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.getApnsService(ApnsHttp2PushService.java:120)
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushGroup(TigMessageListenerConcurrently.java:475)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.push(TigMessageListenerConcurrently.java:290)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.offLinePush(TigMessageListenerConcurrently.java:280)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.consumeMessage(TigMessageListenerConcurrently.java:172)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:417)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:55:49.361 -  apns push Exception null
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushGroup(TigMessageListenerConcurrently.java:475)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.push(TigMessageListenerConcurrently.java:290)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.offLinePush(TigMessageListenerConcurrently.java:280)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.consumeMessage(TigMessageListenerConcurrently.java:172)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:417)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:55:56.644 -  new msg ==> {"fromUserId":"10000020","messageId":"73007c94c19046a9bbf9e64e3a3f4ffb","type":1,"toUserId":"a278fc19fb3d49d18a1fc74a81bd704a","content":"e53454435435435345dffgfdgfdg","fromUserName":"安迪","roomJid":"a278fc19fb3d49d18a1fc74a81bd704a","timeSend":1639979756.568,"toUserName":"vdsf","to":"a278fc19fb3d49d18a1fc74a81bd704a","id":"73007c94c19046a9bbf9e64e3a3f4ffb","toJid":"a278fc19fb3d49d18a1fc74a81bd704a","isGroup":true,"chatType":"groupchat"}
+2021-12-20 13:55:56.656 - deviceMap is Null > 10000
+2021-12-20 13:55:56.664 - 73007c94c19046a9bbf9e64e3a3f4ffb apns push to > 10000021  f940b671cd6f5a130a9a12f0de6c95ff4c0b6e9c15d53568a29b6483cf8f1f31 
+2021-12-20 13:55:56.664 - getApnsClientBuilder Exception {} /opt/tig-push/lexun_apns.p12 (No such file or directory)
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.getApnsService(ApnsHttp2PushService.java:120)
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushGroup(TigMessageListenerConcurrently.java:475)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.push(TigMessageListenerConcurrently.java:290)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.offLinePush(TigMessageListenerConcurrently.java:280)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.consumeMessage(TigMessageListenerConcurrently.java:172)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:417)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 13:55:56.665 -  apns push Exception null
+java.lang.NullPointerException
+	at com.tig.push.service.ApnsHttp2PushService.sendPushToApns(ApnsHttp2PushService.java:252)
+	at com.tig.push.service.ApnsHttp2PushService.pushMsgToUser(ApnsHttp2PushService.java:209)
+	at com.tig.push.service.PushServiceUtils.pushToIos(PushServiceUtils.java:159)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushOne(TigMessageListenerConcurrently.java:357)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.pushGroup(TigMessageListenerConcurrently.java:475)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.push(TigMessageListenerConcurrently.java:290)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.offLinePush(TigMessageListenerConcurrently.java:280)
+	at com.tig.push.rocketmq.TigMessageListenerConcurrently.consumeMessage(TigMessageListenerConcurrently.java:172)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:417)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-20 20:28:18.911 -  new msg ==> {"fromUserId":"10000021","messageId":"ab687e3d5fef430f89967e2a7e90c3ca","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003298.854,"toUserName":"安迪","to":"10000020","id":"ab687e3d5fef430f89967e2a7e90c3ca","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.037 - deviceMap is Null > 10000020
+2021-12-20 20:28:19.079 -  new msg ==> {"fromUserId":"10000021","messageId":"593ee2cfa526420699a59076359715f8","type":1,"toUserId":10000020,"content":"0.","fromUserName":"李雪在线指导","timeSend":1640003299.029,"toUserName":"安迪","to":"10000020","id":"593ee2cfa526420699a59076359715f8","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.242 -  new msg ==> {"fromUserId":"10000021","messageId":"462a5127c17649748a4fa1470d8da0f9","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003299.193,"toUserName":"安迪","to":"10000020","id":"462a5127c17649748a4fa1470d8da0f9","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.380 -  new msg ==> {"fromUserId":"10000021","messageId":"9d966443737444d88c2cae5fbbd6278f","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003299.333,"toUserName":"安迪","to":"10000020","id":"9d966443737444d88c2cae5fbbd6278f","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.513 -  new msg ==> {"fromUserId":"10000021","messageId":"a1a9c52a539d485bbc3d7db49bdb78d5","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003299.465,"toUserName":"安迪","to":"10000020","id":"a1a9c52a539d485bbc3d7db49bdb78d5","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.649 -  new msg ==> {"fromUserId":"10000021","messageId":"d1bd8012e60c4e0e9365a07435e6362e","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003299.602,"toUserName":"安迪","to":"10000020","id":"d1bd8012e60c4e0e9365a07435e6362e","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.790 -  new msg ==> {"fromUserId":"10000021","messageId":"fe567d5bf64148a48615eccefdd1d9e1","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003299.743,"toUserName":"安迪","to":"10000020","id":"fe567d5bf64148a48615eccefdd1d9e1","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:19.945 -  new msg ==> {"fromUserId":"10000021","messageId":"ac0fc91fba2b433384b8b1cdc449e21b","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003299.896,"toUserName":"安迪","to":"10000020","id":"ac0fc91fba2b433384b8b1cdc449e21b","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:20.042 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.046 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.050 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.053 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.057 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.061 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.064 - deviceMap is Null > 10000020
+2021-12-20 20:28:20.211 -  new msg ==> {"fromUserId":"10000021","messageId":"13853bd89fec462e9d8f24758dabb1cf","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003300.151,"toUserName":"安迪","to":"10000020","id":"13853bd89fec462e9d8f24758dabb1cf","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:20.350 -  new msg ==> {"fromUserId":"10000021","messageId":"a1edcc749ea6483e9a1de3c07c405501","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003300.285,"toUserName":"安迪","to":"10000020","id":"a1edcc749ea6483e9a1de3c07c405501","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:20.504 -  new msg ==> {"fromUserId":"10000021","messageId":"ec29b83f26ea4157aab9c3224c12514e","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003300.445,"toUserName":"安迪","to":"10000020","id":"ec29b83f26ea4157aab9c3224c12514e","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:20.658 -  new msg ==> {"fromUserId":"10000021","messageId":"494aada460664f34a5d92811bad47606","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003300.603,"toUserName":"安迪","to":"10000020","id":"494aada460664f34a5d92811bad47606","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:20.802 -  new msg ==> {"fromUserId":"10000021","messageId":"4185ab72a86b4a5fa097b5a87f859da5","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003300.745,"toUserName":"安迪","to":"10000020","id":"4185ab72a86b4a5fa097b5a87f859da5","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:20.953 -  new msg ==> {"fromUserId":"10000021","messageId":"9e021813f66944758cd8b227929bce9f","type":1,"toUserId":10000020,"content":"..","fromUserName":"李雪在线指导","timeSend":1640003300.901,"toUserName":"安迪","to":"10000020","id":"9e021813f66944758cd8b227929bce9f","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:21.068 - deviceMap is Null > 10000020
+2021-12-20 20:28:21.071 - deviceMap is Null > 10000020
+2021-12-20 20:28:21.075 - deviceMap is Null > 10000020
+2021-12-20 20:28:21.079 - deviceMap is Null > 10000020
+2021-12-20 20:28:21.082 - deviceMap is Null > 10000020
+2021-12-20 20:28:21.085 - deviceMap is Null > 10000020
+2021-12-20 20:28:21.119 -  new msg ==> {"fromUserId":"10000021","messageId":"cd0f467da6834b309bffe1516ceca5aa","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003301.067,"toUserName":"安迪","to":"10000020","id":"cd0f467da6834b309bffe1516ceca5aa","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:21.467 -  new msg ==> {"fromUserId":"10000021","messageId":"7e4d1de4022c49849b589f57bbb0441d","type":1,"toUserId":10000020,"content":"..","fromUserName":"李雪在线指导","timeSend":1640003301.416,"toUserName":"安迪","to":"10000020","id":"7e4d1de4022c49849b589f57bbb0441d","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:21.638 -  new msg ==> {"fromUserId":"10000021","messageId":"2bf33c821eb34a13bccfd7f47e14933d","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003301.59,"toUserName":"安迪","to":"10000020","id":"2bf33c821eb34a13bccfd7f47e14933d","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:21.974 -  new msg ==> {"fromUserId":"10000021","messageId":"4274a9febe5849c082428d3ce07d66c9","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003301.917,"toUserName":"安迪","to":"10000020","id":"4274a9febe5849c082428d3ce07d66c9","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:22.089 - deviceMap is Null > 10000020
+2021-12-20 20:28:22.092 - deviceMap is Null > 10000020
+2021-12-20 20:28:22.095 - deviceMap is Null > 10000020
+2021-12-20 20:28:22.098 - deviceMap is Null > 10000020
+2021-12-20 20:28:22.133 -  new msg ==> {"fromUserId":"10000021","messageId":"b3dfebc249db4414a6e398f1b62e20c7","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003302.077,"toUserName":"安迪","to":"10000020","id":"b3dfebc249db4414a6e398f1b62e20c7","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:22.300 -  new msg ==> {"fromUserId":"10000021","messageId":"03a4709f9d8a4324bd77487c437b4c12","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003302.24,"toUserName":"安迪","to":"10000020","id":"03a4709f9d8a4324bd77487c437b4c12","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:22.465 -  new msg ==> {"fromUserId":"10000021","messageId":"0ffb008680324b3f9a8d2284b3141aa7","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003302.408,"toUserName":"安迪","to":"10000020","id":"0ffb008680324b3f9a8d2284b3141aa7","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:22.620 -  new msg ==> {"fromUserId":"10000021","messageId":"cf73758e41d54f95a20d328756a9575c","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003302.565,"toUserName":"安迪","to":"10000020","id":"cf73758e41d54f95a20d328756a9575c","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:22.791 -  new msg ==> {"fromUserId":"10000021","messageId":"0a9b4e0dc1614b0fa9600160b8f5da0c","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003302.734,"toUserName":"安迪","to":"10000020","id":"0a9b4e0dc1614b0fa9600160b8f5da0c","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:22.948 -  new msg ==> {"fromUserId":"10000021","messageId":"c7a4f1fed551410d8abc1c056e9edbdc","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003302.891,"toUserName":"安迪","to":"10000020","id":"c7a4f1fed551410d8abc1c056e9edbdc","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:23.102 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.106 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.109 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.110 -  new msg ==> {"fromUserId":"10000021","messageId":"e21c8ae4d41247ea80ea741a21e27eed","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003303.054,"toUserName":"安迪","to":"10000020","id":"e21c8ae4d41247ea80ea741a21e27eed","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:23.112 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.115 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.120 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.123 - deviceMap is Null > 10000020
+2021-12-20 20:28:23.269 -  new msg ==> {"fromUserId":"10000021","messageId":"89500fcd77d347a494b63779d8bd69ff","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003303.214,"toUserName":"安迪","to":"10000020","id":"89500fcd77d347a494b63779d8bd69ff","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:23.429 -  new msg ==> {"fromUserId":"10000021","messageId":"aa1ebb02d00048b48b42ec30a33b2d5d","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003303.369,"toUserName":"安迪","to":"10000020","id":"aa1ebb02d00048b48b42ec30a33b2d5d","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:23.595 -  new msg ==> {"fromUserId":"10000021","messageId":"b7e82feb3c104353adf45e2bfb21b865","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003303.534,"toUserName":"安迪","to":"10000020","id":"b7e82feb3c104353adf45e2bfb21b865","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:23.754 -  new msg ==> {"fromUserId":"10000021","messageId":"5e8cc10b1700446da9c1cc840722c8ef","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003303.697,"toUserName":"安迪","to":"10000020","id":"5e8cc10b1700446da9c1cc840722c8ef","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:23.913 -  new msg ==> {"fromUserId":"10000021","messageId":"a8ddd2d3a1a3494593a4378755589e25","type":1,"toUserId":10000020,"content":"..","fromUserName":"李雪在线指导","timeSend":1640003303.863,"toUserName":"安迪","to":"10000020","id":"a8ddd2d3a1a3494593a4378755589e25","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:24.075 -  new msg ==> {"fromUserId":"10000021","messageId":"18cddf7786ea4c5e8c1af3e2e801408c","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003304.022,"toUserName":"安迪","to":"10000020","id":"18cddf7786ea4c5e8c1af3e2e801408c","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:24.126 - deviceMap is Null > 10000020
+2021-12-20 20:28:24.129 - deviceMap is Null > 10000020
+2021-12-20 20:28:24.132 - deviceMap is Null > 10000020
+2021-12-20 20:28:24.134 - deviceMap is Null > 10000020
+2021-12-20 20:28:24.137 - deviceMap is Null > 10000020
+2021-12-20 20:28:24.139 - deviceMap is Null > 10000020
+2021-12-20 20:28:24.364 -  new msg ==> {"fromUserId":"10000021","messageId":"d6b9e911c656467688ff6bc83a3593a8","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003304.31,"toUserName":"安迪","to":"10000020","id":"d6b9e911c656467688ff6bc83a3593a8","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:24.663 -  new msg ==> {"fromUserId":"10000021","messageId":"3c49d84f27df48c39ebca115b2928f46","type":1,"toUserId":10000020,"content":"0.","fromUserName":"李雪在线指导","timeSend":1640003304.613,"toUserName":"安迪","to":"10000020","id":"3c49d84f27df48c39ebca115b2928f46","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:24.889 -  new msg ==> {"fromUserId":"10000021","messageId":"f60ab92345a94315b077f01b4c4807a2","type":1,"toUserId":10000020,"content":"0.","fromUserName":"李雪在线指导","timeSend":1640003304.821,"toUserName":"安迪","to":"10000020","id":"f60ab92345a94315b077f01b4c4807a2","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:25.113 -  new msg ==> {"fromUserId":"10000021","messageId":"bc05b0cb136c415cab5ff0f932f3a93f","type":1,"toUserId":10000020,"content":".0","fromUserName":"李雪在线指导","timeSend":1640003305.061,"toUserName":"安迪","to":"10000020","id":"bc05b0cb136c415cab5ff0f932f3a93f","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:25.142 - deviceMap is Null > 10000020
+2021-12-20 20:28:25.146 - deviceMap is Null > 10000020
+2021-12-20 20:28:25.150 - deviceMap is Null > 10000020
+2021-12-20 20:28:25.153 - deviceMap is Null > 10000020
+2021-12-20 20:28:25.372 -  new msg ==> {"fromUserId":"10000021","messageId":"8822e97e4d3f4a2f81de0be9de316dbf","type":1,"toUserId":10000020,"content":".0","fromUserName":"李雪在线指导","timeSend":1640003305.313,"toUserName":"安迪","to":"10000020","id":"8822e97e4d3f4a2f81de0be9de316dbf","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:25.587 -  new msg ==> {"fromUserId":"10000021","messageId":"ee7182bd83544c7fb842d39c37b0641f","type":1,"toUserId":10000020,"content":".0","fromUserName":"李雪在线指导","timeSend":1640003305.538,"toUserName":"安迪","to":"10000020","id":"ee7182bd83544c7fb842d39c37b0641f","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:25.841 -  new msg ==> {"fromUserId":"10000021","messageId":"8d5f93994e594886b5203772df8c0759","type":1,"toUserId":10000020,"content":"0","fromUserName":"李雪在线指导","timeSend":1640003305.792,"toUserName":"安迪","to":"10000020","id":"8d5f93994e594886b5203772df8c0759","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:26.159 - deviceMap is Null > 10000020
+2021-12-20 20:28:26.162 - deviceMap is Null > 10000020
+2021-12-20 20:28:26.166 - deviceMap is Null > 10000020
+2021-12-20 20:28:26.167 -  new msg ==> {"fromUserId":"10000021","messageId":"5811ef0662264cacb93dd4136232d602","type":1,"toUserId":10000020,"content":"0..","fromUserName":"李雪在线指导","timeSend":1640003306.113,"toUserName":"安迪","to":"10000020","id":"5811ef0662264cacb93dd4136232d602","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:26.352 -  new msg ==> {"fromUserId":"10000021","messageId":"4faf791ceea8466d9eea587c861c9b98","type":1,"toUserId":10000020,"content":"3","fromUserName":"李雪在线指导","timeSend":1640003306.303,"toUserName":"安迪","to":"10000020","id":"4faf791ceea8466d9eea587c861c9b98","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:26.542 -  new msg ==> {"fromUserId":"10000021","messageId":"b31a00a6de5e4f108843fee1a6ea188e","type":1,"toUserId":10000020,"content":"3","fromUserName":"李雪在线指导","timeSend":1640003306.482,"toUserName":"安迪","to":"10000020","id":"b31a00a6de5e4f108843fee1a6ea188e","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:26.676 -  new msg ==> {"fromUserId":"10000021","messageId":"dc713bfdbb4a451bb360b6f10f13da13","type":1,"toUserId":10000020,"content":"23","fromUserName":"李雪在线指导","timeSend":1640003306.623,"toUserName":"安迪","to":"10000020","id":"dc713bfdbb4a451bb360b6f10f13da13","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:26.831 -  new msg ==> {"fromUserId":"10000021","messageId":"ee1415fb8ba04daa827c7859d1dc50f0","type":1,"toUserId":10000020,"content":"23","fromUserName":"李雪在线指导","timeSend":1640003306.779,"toUserName":"安迪","to":"10000020","id":"ee1415fb8ba04daa827c7859d1dc50f0","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:26.991 -  new msg ==> {"fromUserId":"10000021","messageId":"66e037c9d03248ba92910aaad805e3c2","type":1,"toUserId":10000020,"content":"3","fromUserName":"李雪在线指导","timeSend":1640003306.93,"toUserName":"安迪","to":"10000020","id":"66e037c9d03248ba92910aaad805e3c2","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:27.162 -  new msg ==> {"fromUserId":"10000021","messageId":"16670afca078409fb920801b6f3dbf66","type":1,"toUserId":10000020,"content":"2","fromUserName":"李雪在线指导","timeSend":1640003307.095,"toUserName":"安迪","to":"10000020","id":"16670afca078409fb920801b6f3dbf66","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:27.170 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.173 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.176 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.180 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.184 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.186 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.189 - deviceMap is Null > 10000020
+2021-12-20 20:28:27.322 -  new msg ==> {"fromUserId":"10000021","messageId":"838c2e7bab614ceab99d8d6e9520fc5d","type":1,"toUserId":10000020,"content":"3232","fromUserName":"李雪在线指导","timeSend":1640003307.269,"toUserName":"安迪","to":"10000020","id":"838c2e7bab614ceab99d8d6e9520fc5d","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:27.487 -  new msg ==> {"fromUserId":"10000021","messageId":"a260c037501d48ffaefd24c4513ce672","type":1,"toUserId":10000020,"content":"3","fromUserName":"李雪在线指导","timeSend":1640003307.426,"toUserName":"安迪","to":"10000020","id":"a260c037501d48ffaefd24c4513ce672","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:27.653 -  new msg ==> {"fromUserId":"10000021","messageId":"7cc73c59be64472587e88568ec8a0a58","type":1,"toUserId":10000020,"content":"203","fromUserName":"李雪在线指导","timeSend":1640003307.599,"toUserName":"安迪","to":"10000020","id":"7cc73c59be64472587e88568ec8a0a58","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:27.990 -  new msg ==> {"fromUserId":"10000021","messageId":"3d0565613d9f418db41ff68d333ba05b","type":1,"toUserId":10000020,"content":".0","fromUserName":"李雪在线指导","timeSend":1640003307.922,"toUserName":"安迪","to":"10000020","id":"3d0565613d9f418db41ff68d333ba05b","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:28.148 -  new msg ==> {"fromUserId":"10000021","messageId":"9311cfd8d34849aa9df664b2368755af","type":1,"toUserId":10000020,"content":".0.","fromUserName":"李雪在线指导","timeSend":1640003308.088,"toUserName":"安迪","to":"10000020","id":"9311cfd8d34849aa9df664b2368755af","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:28.194 - deviceMap is Null > 10000020
+2021-12-20 20:28:28.197 - deviceMap is Null > 10000020
+2021-12-20 20:28:28.201 - deviceMap is Null > 10000020
+2021-12-20 20:28:28.204 - deviceMap is Null > 10000020
+2021-12-20 20:28:28.207 - deviceMap is Null > 10000020
+2021-12-20 20:28:28.329 -  new msg ==> {"fromUserId":"10000021","messageId":"7ace2e3e64a34e749a80f0b4afb2d31f","type":1,"toUserId":10000020,"content":"0","fromUserName":"李雪在线指导","timeSend":1640003308.258,"toUserName":"安迪","to":"10000020","id":"7ace2e3e64a34e749a80f0b4afb2d31f","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:28.499 -  new msg ==> {"fromUserId":"10000021","messageId":"ff7bdf8c12614d79a425352d96190df8","type":1,"toUserId":10000020,"content":".0.0","fromUserName":"李雪在线指导","timeSend":1640003308.447,"toUserName":"安迪","to":"10000020","id":"ff7bdf8c12614d79a425352d96190df8","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:28.682 -  new msg ==> {"fromUserId":"10000021","messageId":"158c57ce16044900937b7db7f9816594","type":1,"toUserId":10000020,"content":".0","fromUserName":"李雪在线指导","timeSend":1640003308.63,"toUserName":"安迪","to":"10000020","id":"158c57ce16044900937b7db7f9816594","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:29.028 -  new msg ==> {"fromUserId":"10000021","messageId":"6c893354065f49e59665222340161667","type":1,"toUserId":10000020,"content":".0","fromUserName":"李雪在线指导","timeSend":1640003308.955,"toUserName":"安迪","to":"10000020","id":"6c893354065f49e59665222340161667","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:29.214 - deviceMap is Null > 10000020
+2021-12-20 20:28:29.218 - deviceMap is Null > 10000020
+2021-12-20 20:28:29.221 - deviceMap is Null > 10000020
+2021-12-20 20:28:29.225 - deviceMap is Null > 10000020
+2021-12-20 20:28:34.822 -  new msg ==> {"fromUserId":"10000021","messageId":"90808025b6ab4682953cd21fba211445","type":1,"toUserId":10000020,"content":"0.","fromUserName":"李雪在线指导","timeSend":1640003314.77,"toUserName":"安迪","to":"10000020","id":"90808025b6ab4682953cd21fba211445","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:35.231 - deviceMap is Null > 10000020
+2021-12-20 20:28:35.585 -  new msg ==> {"fromUserId":"10000021","messageId":"315b61007810403e9744d20f27a4786f","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003315.524,"toUserName":"安迪","to":"10000020","id":"315b61007810403e9744d20f27a4786f","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:35.749 -  new msg ==> {"fromUserId":"10000021","messageId":"4fc4ee2d36cd4221b101519259c153fd","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003315.69,"toUserName":"安迪","to":"10000020","id":"4fc4ee2d36cd4221b101519259c153fd","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:35.908 -  new msg ==> {"fromUserId":"10000021","messageId":"c973b67ace584caea7226ce02bbdc4eb","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003315.847,"toUserName":"安迪","to":"10000020","id":"c973b67ace584caea7226ce02bbdc4eb","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:36.070 -  new msg ==> {"fromUserId":"10000021","messageId":"8c3768a61ed84d3c8b8bbd7fc4df256b","type":1,"toUserId":10000020,"content":".","fromUserName":"李雪在线指导","timeSend":1640003316.007,"toUserName":"安迪","to":"10000020","id":"8c3768a61ed84d3c8b8bbd7fc4df256b","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 20:28:36.235 - deviceMap is Null > 10000020
+2021-12-20 20:28:36.239 - deviceMap is Null > 10000020
+2021-12-20 20:28:36.242 - deviceMap is Null > 10000020
+2021-12-20 20:28:36.246 - deviceMap is Null > 10000020
+2021-12-20 21:10:25.204 -  new msg ==> {"fromUserId":"10000021","messageId":"17b4681ba0c947c4a7bfad6f7d3eecd6","type":1,"toUserId":10000020,"content":"e ","fromUserName":"李雪在线指导","timeSend":1640005825.153,"toUserName":"安迪","to":"10000020","id":"17b4681ba0c947c4a7bfad6f7d3eecd6","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:25.520 - deviceMap is Null > 10000020
+2021-12-20 21:10:26.230 -  new msg ==> {"fromUserId":"10000021","messageId":"000917d412924ba8852f46664698e7bf","type":1,"toUserId":10000020,"content":"我","fromUserName":"李雪在线指导","timeSend":1640005826.186,"toUserName":"安迪","to":"10000020","id":"000917d412924ba8852f46664698e7bf","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:26.526 - deviceMap is Null > 10000020
+2021-12-20 21:10:27.431 -  new msg ==> {"fromUserId":"10000021","messageId":"c06139a4025a4af5a05fbaf729e9f099","type":1,"toUserId":10000020,"content":"123123","fromUserName":"李雪在线指导","timeSend":1640005827.386,"toUserName":"安迪","to":"10000020","id":"c06139a4025a4af5a05fbaf729e9f099","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:27.530 - deviceMap is Null > 10000020
+2021-12-20 21:10:27.751 -  new msg ==> {"fromUserId":"10000021","messageId":"9113d3a48cc645ac9565c724dc2beabc","type":1,"toUserId":10000020,"content":"12","fromUserName":"李雪在线指导","timeSend":1640005827.701,"toUserName":"安迪","to":"10000020","id":"9113d3a48cc645ac9565c724dc2beabc","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:27.924 -  new msg ==> {"fromUserId":"10000021","messageId":"11813c4398d04534868c51a04e9d03e5","type":1,"toUserId":10000020,"content":"312","fromUserName":"李雪在线指导","timeSend":1640005827.874,"toUserName":"安迪","to":"10000020","id":"11813c4398d04534868c51a04e9d03e5","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:28.069 -  new msg ==> {"fromUserId":"10000021","messageId":"672a02fad3d74c55b9a8da8f62eef121","type":1,"toUserId":10000020,"content":"33","fromUserName":"李雪在线指导","timeSend":1640005828.024,"toUserName":"安迪","to":"10000020","id":"672a02fad3d74c55b9a8da8f62eef121","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:28.214 -  new msg ==> {"fromUserId":"10000021","messageId":"6f439218b54f41f6b623b72e181c5174","type":1,"toUserId":10000020,"content":"13","fromUserName":"李雪在线指导","timeSend":1640005828.17,"toUserName":"安迪","to":"10000020","id":"6f439218b54f41f6b623b72e181c5174","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:28.439 -  new msg ==> {"fromUserId":"10000021","messageId":"14d72518c3d244438ea19519461a07d6","type":1,"toUserId":10000020,"content":"123","fromUserName":"李雪在线指导","timeSend":1640005828.397,"toUserName":"安迪","to":"10000020","id":"14d72518c3d244438ea19519461a07d6","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:28.533 - deviceMap is Null > 10000020
+2021-12-20 21:10:28.537 - deviceMap is Null > 10000020
+2021-12-20 21:10:28.540 - deviceMap is Null > 10000020
+2021-12-20 21:10:28.543 - deviceMap is Null > 10000020
+2021-12-20 21:10:28.546 - deviceMap is Null > 10000020
+2021-12-20 21:10:30.341 -  new msg ==> {"fromUserId":"10000021","messageId":"706f7142fbb742249951a0d7f0955637","type":1,"toUserId":10000020,"content":"dddddddd","fromUserName":"李雪在线指导","timeSend":1640005830.297,"toUserName":"安迪","to":"10000020","id":"706f7142fbb742249951a0d7f0955637","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:30.550 - deviceMap is Null > 10000020
+2021-12-20 21:10:32.302 -  new msg ==> {"fromUserId":"10000021","messageId":"dbdf7196f7fb4c18880dca93d994fd07","type":1,"toUserId":10000020,"content":"ee1","fromUserName":"李雪在线指导","timeSend":1640005832.253,"toUserName":"安迪","to":"10000020","id":"dbdf7196f7fb4c18880dca93d994fd07","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:32.554 - deviceMap is Null > 10000020
+2021-12-20 21:10:32.555 -  new msg ==> {"fromUserId":"10000021","messageId":"b9a12a5cc8ae4df18e5ded9ff5145785","type":1,"toUserId":10000020,"content":"1","fromUserName":"李雪在线指导","timeSend":1640005832.512,"toUserName":"安迪","to":"10000020","id":"b9a12a5cc8ae4df18e5ded9ff5145785","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:32.763 -  new msg ==> {"fromUserId":"10000021","messageId":"291d28eae09e46f7a68b87df5d611fad","type":1,"toUserId":10000020,"content":"1","fromUserName":"李雪在线指导","timeSend":1640005832.719,"toUserName":"安迪","to":"10000020","id":"291d28eae09e46f7a68b87df5d611fad","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:32.985 -  new msg ==> {"fromUserId":"10000021","messageId":"6e42a2c056954687afadac192b062cb1","type":1,"toUserId":10000020,"content":"1","fromUserName":"李雪在线指导","timeSend":1640005832.942,"toUserName":"安迪","to":"10000020","id":"6e42a2c056954687afadac192b062cb1","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:33.227 -  new msg ==> {"fromUserId":"10000021","messageId":"e308b0b7eb5746d7a48b5871b9efd812","type":1,"toUserId":10000020,"content":"1","fromUserName":"李雪在线指导","timeSend":1640005833.183,"toUserName":"安迪","to":"10000020","id":"e308b0b7eb5746d7a48b5871b9efd812","toJid":"10000020","isGroup":false,"chatType":"chat"}
+2021-12-20 21:10:33.558 - deviceMap is Null > 10000020
+2021-12-20 21:10:33.561 - deviceMap is Null > 10000020
+2021-12-20 21:10:33.564 - deviceMap is Null > 10000020
+2021-12-20 21:10:33.567 - deviceMap is Null > 10000020
+2021-12-20 21:10:37.519 -  new msg ==> {"fromUserId":"10000021","messageId":"76adbb3d81da4325832374a73f44fe10","type":1,"toUserId":"a278fc19fb3d49d18a1fc74a81bd704a","content":"1111","fromUserName":"李雪在线指导","roomJid":"a278fc19fb3d49d18a1fc74a81bd704a","timeSend":1640005837.453,"toUserName":"vdsf","to":"a278fc19fb3d49d18a1fc74a81bd704a","id":"76adbb3d81da4325832374a73f44fe10","toJid":"a278fc19fb3d49d18a1fc74a81bd704a","isGroup":true,"chatType":"groupchat"}
+2021-12-20 21:10:37.530 - deviceMap is Null > 10000
+2021-12-20 21:10:37.534 - deviceMap is Null > 10000020
+2021-12-20 21:10:38.478 -  new msg ==> {"fromUserId":"10000021","messageId":"ea9f583fd8df44549a8e8f2ce38c464e","type":1,"toUserId":"a278fc19fb3d49d18a1fc74a81bd704a","content":"111","fromUserName":"李雪在线指导","roomJid":"a278fc19fb3d49d18a1fc74a81bd704a","timeSend":1640005838.417,"toUserName":"vdsf","to":"a278fc19fb3d49d18a1fc74a81bd704a","id":"ea9f583fd8df44549a8e8f2ce38c464e","toJid":"a278fc19fb3d49d18a1fc74a81bd704a","isGroup":true,"chatType":"groupchat"}
+2021-12-20 21:10:38.486 - deviceMap is Null > 10000
+2021-12-20 21:10:38.489 - deviceMap is Null > 10000020
+2021-12-20 21:10:39.274 -  new msg ==> {"fromUserId":"10000021","messageId":"f74b048d00e8481db1d747dcc966e690","type":1,"toUserId":"a278fc19fb3d49d18a1fc74a81bd704a","content":"12313","fromUserName":"李雪在线指导","roomJid":"a278fc19fb3d49d18a1fc74a81bd704a","timeSend":1640005839.208,"toUserName":"vdsf","to":"a278fc19fb3d49d18a1fc74a81bd704a","id":"f74b048d00e8481db1d747dcc966e690","toJid":"a278fc19fb3d49d18a1fc74a81bd704a","isGroup":true,"chatType":"groupchat"}
+2021-12-20 21:10:39.283 - deviceMap is Null > 10000
+2021-12-20 21:10:39.286 - deviceMap is Null > 10000020
+2021-12-20 21:10:40.024 -  new msg ==> {"fromUserId":"10000021","messageId":"ff81f7b512b144d5945e1d7276a9f363","type":1,"toUserId":"a278fc19fb3d49d18a1fc74a81bd704a","content":"123123","fromUserName":"李雪在线指导","roomJid":"a278fc19fb3d49d18a1fc74a81bd704a","timeSend":1640005839.96,"toUserName":"vdsf","to":"a278fc19fb3d49d18a1fc74a81bd704a","id":"ff81f7b512b144d5945e1d7276a9f363","toJid":"a278fc19fb3d49d18a1fc74a81bd704a","isGroup":true,"chatType":"groupchat"}
+2021-12-20 21:10:40.032 - deviceMap is Null > 10000
+2021-12-20 21:10:40.036 - deviceMap is Null > 10000020
+2021-12-22 10:25:47.562 -  new msg ==> {"fromUserName":"李雪在线指导","deleteTime":0,"fromUserId":"10000021","timeSend":1640139938.1278422,"messageId":"ab20be929f2a42039a55217def2a12ff","type":1,"isGroup":false,"toUserId":10000020,"content":"好👌？我也要努力"}
+2021-12-22 10:25:47.752 - deviceMap is Null > 10000020
+2021-12-24 19:39:53.249 - Unable to send PING command over channel: [id: 0xd044e885, L:0.0.0.0/0.0.0.0:43636 - R:/127.0.0.1:6379]
+java.util.concurrent.CancellationException: null
+	at io.netty.util.concurrent.DefaultPromise.cancel(...)(Unknown Source)
